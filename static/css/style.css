@@ -89,6 +89,9 @@ td {
 a img {
   border: none;
 }
+a i {
+  padding: 0 0 5px 5px;
+}
 input,
 button {
   margin: 0;
