@@ -8,7 +8,7 @@
                 <a class="github-button" href="https://github.com/{{ .Site.Params.Github }}" data-count-href="/{{ .Site.Params.Github }}/followers" data-count-api="/users/{{ .Site.Params.Github }}#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @{{ .Site.Params.Github }} on GitHub">Follow @{{ .Site.Params.Github }}</a>
                 <script async defer src="https://buttons.github.io/buttons.js"></script>
             </div>
-            &copy; {{ .Now.Format "2006"}} {{ or .Site.Author .Site.Title }}&nbsp;
+            &copy; {{ now.Format "2006"}} {{ or .Site.Author .Site.Title }}&nbsp;
             Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos">Minos</a>
         </div>
     </div>
