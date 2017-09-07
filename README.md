@@ -2,7 +2,7 @@
 
 **_A simple and retro styled theme, concentrated more on your ideas._**
 
-Minos is a Hugo theme ported from Hexo theme [Minos](https://github.com/ppoffice/hexo-theme-minos). Requires Hugo v0.15+.
+Minos is a Hugo theme ported from Hexo theme [Minos](https://github.com/ppoffice/hexo-theme-minos). Requires Hugo v0.20+.
 
 ## Screenshots
 
@@ -40,6 +40,11 @@ theme = "hugo-theme-minos"
 
 ## Options
 
+### Pagination
+```
+paginate = 10
+```
+
 ### Smart TOC
 ```
 [params]
@@ -63,6 +68,8 @@ theme = "hugo-theme-minos"
 [params]
     katex = true
 ```
+
+For other configuration variables, visit [Hugo documentation](https://gohugo.io/overview/configuration/#configuration-variables).
 
 ## Post Params
 
