@@ -1,0 +1,36 @@
+{{ partial "head.html" . }}
+
+<body id="not-found">
+  {{ partial "header.html" . }}
+  <h1 class="title">Wow! There is nothing here.</h1>
+  <h2 class="subtitle">How about an xkcd comic?</h2>
+  <img id="xkcd" />
+  <p class="caption"></p>
+  <a class="caption"></a>
+
+  <script type="text/javascript">
+    fetch('https://cors.now.sh/http://xkcd.com/info.0.json')
+      .then(response => response.json())
+      .then(data => data.num)
+      .then(function (max) {
+        var num = Math.floor(Math.random() * (max + 1) + 1)
+        fetch('https://cors.now.sh/http://xkcd.com/' + num + '/info.0.json')
+          .then(response => response.json())
+          .then(function (data) {
+            var img = document.body.querySelector('img[id=xkcd]');
+            img.setAttribute('src', data.img);
+
+            var caption = document.body.querySelector('p[class=caption]')
+            caption.innerHTML = data.safe_title
+
+            var url = document.body.querySelector('a[class=caption')
+            var source = 'https://xkcd.com/' + num
+            url.setAttribute('href', source)
+            url.innerHTML = source
+          });
+      });
+  </script>
+  {{ partial "footer.html" . }}
+</body>
+
+</html>
